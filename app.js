@@ -81,9 +81,6 @@ if (myGoal === 'yes' || myGoal === 'y') {
 }
 alert(answerQ + ', I do want to be a software developer.');
 
-// ****** final message section ******
-alert('Thanks ' + userNme + ' , you answered ' + correctAnswerCount + ' questions correctly!');
-
 // ****** Lab 03 *******
 // Question 6
 var myNum = 4;
@@ -102,8 +99,9 @@ while(x !== 0) {
     guessNum = parseInt(prompt('Too Low, guess again, you have ' + x + ' guesses.'));
     console.log('too low');
   } else if (guessNum === myNum && x !== 0) {
-    x = 0;
+    x = 1;
     alert('Correct! My number was ' + myNum + '!');
+    correctAnswerCount++;
     console.log('correct');
   }
   x--;
@@ -112,6 +110,27 @@ while(x !== 0) {
     console.log('no more guesses');
   }
 }
+var favoriteColor = ['red', 'blue', 'purple', 'orange'];
+var guess = '';
+var b = 0;
+
+for (var i = 0; i <= 6; i++) {
+  guess = prompt('Try and guess one of my favorite colors, you have ' + a + ' guesses.');
+  guess = guess.toLowerCase;
+
+  while (b < favoriteColor.length) {
+    if (guess === favoriteColor[b]) {
+      alert('Correct! ' + guess.toUpperCase + ' is one of my favorite colors!');
+      correctAnswerCount++;
+      b = favoriteColor.length;
+      i = 6;
+    }
+    b++;
+  }
+}
+// ****** final message section ******
+alert('Thanks ' + userNme + ' , you answered a total of ' + correctAnswerCount + ' questions correctly!');
+
 
 
 
