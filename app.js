@@ -83,3 +83,35 @@ alert(answerQ + ', I do want to be a software developer.');
 
 // ****** final message section ******
 alert('Thanks ' + userNme + ' , you answered ' + correctAnswerCount + ' questions correctly!');
+
+// ****** Lab 03 *******
+// Question 6
+var myNum = 4;
+var guessNum = null;
+
+var x = 4;
+while(x !== 0) {
+  console.log('guess x:',x);
+  if (isNaN(guessNum) || guessNum === null) {
+    guessNum = parseInt(prompt('Guess what number I am thinking of between 1 and 10. You have ' + x + ' guesses.'));
+    console.log('start or null');
+  } else if (guessNum > myNum && x !== 0) {
+    guessNum = parseInt(prompt('Too High, guess again, you have ' + x + ' guesses.'));
+    console.log('too high');
+  } else if (guessNum < myNum && x !== 0) {
+    guessNum = parseInt(prompt('Too Low, guess again, you have ' + x + ' guesses.'));
+    console.log('too low');
+  } else if (guessNum === myNum && x !== 0) {
+    x = 0;
+    alert('Correct! My number was ' + myNum + '!');
+    console.log('correct');
+  }
+  x--;
+  if (x === 0) {
+    alert('Sorry! My number was ' + myNum + '!');
+    console.log('no more guesses');
+  }
+}
+
+
+

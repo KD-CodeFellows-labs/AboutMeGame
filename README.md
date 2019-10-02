@@ -1,2 +1,15 @@
-# 201Lab2
+# 201Lab2 About Me page
 201 Class2 Lab2
+
+## Lab 02
+Greeting with 5 question Quiz
+
+And a short Bio
+
+## Lab 03
+
+Added Top Ten List to page
+Added Summary of Me to page
+
+Adding 2 more questions
+
