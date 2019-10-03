@@ -6,9 +6,10 @@ function greeting() {
   if ((userNme === null)||(userNme === '')) {userNme = 'No Name';}
   // console.log('userNme:' + userNme);
   alert('Greetings ' + userNme + ', Welcome to Kevin\'s About Me page');
+  return userNme;
 }
-greeting();
-
+var globalUserName;
+globalUserName = greeting();
 
 // ***** Quiz section *****
 alert('Please take this short quiz about Kevin, answer yes or no.');
@@ -103,61 +104,64 @@ questionFive();
 
 // ****** Lab 03 *******
 // Question 6
-var myNum = 4;
-var guessNum = null;
-var guessCount;
-var numberGuess = false;
+function questionSix(){
+  var myNum = 4;
+  var guessNum = null;
+  var guessCount;
+  var numberGuess = false;
 
-guessCount = 4;
-for(var i = 0; i < 4; i++) {
-  console.log('guess i:',i);
-  if (isNaN(guessNum) || guessNum === null) {
-    guessNum = parseInt(prompt('Guess what number I am thinking of between 1 and 10. You have ' + guessCount + ' guesses.'));
-    console.log('start or null');
-    guessCount--;
-  } else if (guessNum > myNum) {
-    guessNum = parseInt(prompt('Too High, guess again, you have ' + guessCount + ' guesses.'));
-    console.log('too high');
-    guessCount--;
-  } else if (guessNum < myNum) {
-    guessNum = parseInt(prompt('Too Low, guess again, you have ' + guessCount + ' guesses.'));
-    console.log('too low');
-    guessCount--;
+  guessCount = 4;
+  for(var i = 0; i < 4; i++) {
+    console.log('guess i:',i);
+    if (isNaN(guessNum) || guessNum === null) {
+      guessNum = parseInt(prompt('Guess what number I am thinking of between 1 and 10. You have ' + guessCount + ' guesses.'));
+      console.log('start or null');
+      guessCount--;
+    } else if (guessNum > myNum) {
+      guessNum = parseInt(prompt('Too High, guess again, you have ' + guessCount + ' guesses.'));
+      console.log('too high');
+      guessCount--;
+    } else if (guessNum < myNum) {
+      guessNum = parseInt(prompt('Too Low, guess again, you have ' + guessCount + ' guesses.'));
+      console.log('too low');
+      guessCount--;
+    }
+    if (guessNum === myNum) {
+      alert('Correct! My number was ' + myNum.toString() + '!');
+      correctAnswerCount++;
+      console.log('correct');
+      numberGuess = true;
+      break;
+    }
   }
-  if (guessNum === myNum) {
-    alert('Correct! My number was ' + myNum.toString() + '!');
-    correctAnswerCount++;
-    console.log('correct');
-    numberGuess = true;
-    break;
+  if (numberGuess !== true) {
+    alert('Sorry! My number was ' + myNum + '!');
+    console.log('sorry');
   }
 }
-if (numberGuess !== true) {
-  alert('Sorry! My number was ' + myNum + '!');
-  console.log('sorry');
-}
+questionSix();
 
 // Question 7
 var favoriteColor = ['red', 'blue', 'purple', 'orange'];
 var guess = '';
-guessCount = 6;
+var guessCount7 = 6;
 var b;
 
 for (var x = 0; x < 6; x++) {
-  guess = prompt('Try and guess one of my favorite colors, you have ' + guessCount +' guesses.');
+  guess = prompt('Try and guess one of my favorite colors, you have ' + guessCount7 +' guesses.');
   guess = guess.toLowerCase();
   b = 0;
   while (b < favoriteColor.length) {
     if (guess === favoriteColor[b].toString()) {
       alert('Correct! ' + guess.toUpperCase() + ' is one of my favorite colors!');
       correctAnswerCount++;
-      guessCount = 0;
+      guessCount7 = 0;
       x = 6;
       break;
     }
     b++;
   }
-  guessCount--;
+  guessCount7--;
 }
 
 var c = 1;
@@ -169,7 +173,7 @@ while (c < favoriteColor.length) {
 alert('My Favorite colors are: ' + favoriteString);
 
 // ****** final message section ******
-alert('Thanks ' + userNme + ' , you answered a total of ' + correctAnswerCount + ' questions correctly!');
+alert('Thanks ' + globalUserName + ' , you answered a total of ' + correctAnswerCount + ' questions correctly!');
 
 
 
