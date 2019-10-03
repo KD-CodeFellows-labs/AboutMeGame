@@ -13,3 +13,8 @@ Added Summary of Me to page
 
 Adding 2 more questions
 
+
+Driver - Amy Evans
+Navigator - Kevin Dreyer
+We worked on adding the functions to the questions.
+
