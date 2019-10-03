@@ -103,7 +103,8 @@ for(var i = 0; i < 4; i++) {
     guessNum = parseInt(prompt('Too Low, guess again, you have ' + guessCount + ' guesses.'));
     console.log('too low');
     guessCount--;
-  } else if (guessNum === myNum) {
+  }
+  if (guessNum === myNum) {
     alert('Correct! My number was ' + myNum.toString() + '!');
     correctAnswerCount++;
     console.log('correct');
