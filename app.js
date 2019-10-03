@@ -85,49 +85,60 @@ alert(answerQ + ', I do want to be a software developer.');
 // Question 6
 var myNum = 4;
 var guessNum = null;
+var guessCount;
+var numberGuess = false;
 
-var x = 4;
-while(x !== 0) {
-  console.log('guess x:',x);
+guessCount = 4;
+for(var i = 0; i < 4; i++) {
+  console.log('guess i:',i);
   if (isNaN(guessNum) || guessNum === null) {
-    guessNum = parseInt(prompt('Guess what number I am thinking of between 1 and 10. You have ' + x + ' guesses.'));
+    guessNum = parseInt(prompt('Guess what number I am thinking of between 1 and 10. You have ' + guessCount + ' guesses.'));
     console.log('start or null');
-  } else if (guessNum > myNum && x !== 0) {
-    guessNum = parseInt(prompt('Too High, guess again, you have ' + x + ' guesses.'));
+    guessCount--;
+  } else if (guessNum > myNum) {
+    guessNum = parseInt(prompt('Too High, guess again, you have ' + guessCount + ' guesses.'));
     console.log('too high');
-  } else if (guessNum < myNum && x !== 0) {
-    guessNum = parseInt(prompt('Too Low, guess again, you have ' + x + ' guesses.'));
+    guessCount--;
+  } else if (guessNum < myNum) {
+    guessNum = parseInt(prompt('Too Low, guess again, you have ' + guessCount + ' guesses.'));
     console.log('too low');
-  } else if (guessNum === myNum && x !== 0) {
-    x = 1;
-    alert('Correct! My number was ' + myNum + '!');
+    guessCount--;
+  } else if (guessNum === myNum) {
+    alert('Correct! My number was ' + myNum.toString() + '!');
     correctAnswerCount++;
     console.log('correct');
-  }
-  x--;
-  if (x === 0) {
-    alert('Sorry! My number was ' + myNum + '!');
-    console.log('no more guesses');
+    numberGuess = true;
+    break;
   }
 }
+if (numberGuess !== true) {
+  alert('Sorry! My number was ' + myNum + '!');
+  console.log('sorry');
+}
+
+// Question 7
 var favoriteColor = ['red', 'blue', 'purple', 'orange'];
 var guess = '';
-var b = 0;
+guessCount = 6;
+var b;
 
-for (var i = 0; i <= 6; i++) {
-  guess = prompt('Try and guess one of my favorite colors, you have ' + a + ' guesses.');
-  guess = guess.toLowerCase;
-
+for (var x = 0; x < 6; x++) {
+  guess = prompt('Try and guess one of my favorite colors, you have ' + guessCount +' guesses.');
+  guess = guess.toLowerCase();
+  b = 0;
   while (b < favoriteColor.length) {
-    if (guess === favoriteColor[b]) {
-      alert('Correct! ' + guess.toUpperCase + ' is one of my favorite colors!');
+    if (guess === favoriteColor[b].toString()) {
+      alert('Correct! ' + guess.toUpperCase() + ' is one of my favorite colors!');
       correctAnswerCount++;
-      b = favoriteColor.length;
-      i = 6;
+      guessCount = 0;
+      x = 6;
+      break;
     }
     b++;
   }
+  guessCount--;
 }
+
 // ****** final message section ******
 alert('Thanks ' + userNme + ' , you answered a total of ' + correctAnswerCount + ' questions correctly!');
 
