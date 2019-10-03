@@ -16,75 +16,90 @@ var correctAnswerCount = 0;
 var answerQ = '';
 
 // Quiz Question 1
-var grewUp = prompt('Quiz Question 1: Did Kevin grow up in New Jersey?');
-grewUp = grewUp.toLowerCase();
+function questionOne(){
+  var grewUp = prompt('Quiz Question 1: Did Kevin grow up in New Jersey?');
+  grewUp = grewUp.toLowerCase();
 
-if (grewUp === 'yes' || grewUp === 'y') {
-  // console.log('q1: correct');
-  correctAnswerCount++;
-  answerQ = 'Correct';
-} else {
-  // console.log('q1: wrong');
-  answerQ = 'Wrong';
+  if (grewUp === 'yes' || grewUp === 'y') {
+    // console.log('q1: correct');
+    correctAnswerCount++;
+    answerQ = 'Correct';
+  } else {
+    // console.log('q1: wrong');
+    answerQ = 'Wrong';
+  }
+  alert(answerQ + ', I grew up in New Jersey, just outside of Philadelphia PA.');
 }
-alert(answerQ + ', I grew up in New Jersey, just outside of Philadelphia PA.');
+questionOne ();
 
 // Quiz Question 2
-var movedTo = prompt('Quiz Question 2: Did Kevin move to Seattle in 2008?');
-movedTo = movedTo.toLowerCase();
+function questionTwo(){
+  var movedTo = prompt('Quiz Question 2: Did Kevin move to Seattle in 2008?');
+  movedTo = movedTo.toLowerCase();
 
-if (movedTo === 'yes' || movedTo === 'y') {
-  // console.log('q2: correct');
-  correctAnswerCount++;
-  answerQ = 'Correct';
-} else {
-  // console.log('q2: wrong');
-  answerQ = 'Wrong';
+  if (movedTo === 'yes' || movedTo === 'y') {
+    // console.log('q2: correct');
+    correctAnswerCount++;
+    answerQ = 'Correct';
+  } else {
+    // console.log('q2: wrong');
+    answerQ = 'Wrong';
+  }
+  alert(answerQ + ', I did move to Seattle in 2008.');
 }
-alert(answerQ + ', I did move to Seattle in 2008.');
+questionTwo();
 
 // Quiz Question 3
-var mySchool = prompt('Quiz Question 3: Did Kevin go to school at Drexel University?');
-mySchool = mySchool.toLowerCase();
+function questionThree(){
+  var mySchool = prompt('Quiz Question 3: Did Kevin go to school at Drexel University?');
+  mySchool = mySchool.toLowerCase();
 
-if (mySchool === 'yes' || mySchool === 'y') {
-  // console.log('q3: correct');
-  correctAnswerCount++;
-  answerQ = 'Correct';
-} else {
-  // console.log('q3: wrong');
-  answerQ = 'Wrong';
+  if (mySchool === 'yes' || mySchool === 'y') {
+    // console.log('q3: correct');
+    correctAnswerCount++;
+    answerQ = 'Correct';
+  } else {
+    // console.log('q3: wrong');
+    answerQ = 'Wrong';
+  }
+  alert(answerQ + ', I did go to Drexel.');
 }
-alert(answerQ + ', I did go to Drexel.');
+questionThree();
 
 // Quiz Question 4
-var myDegree = prompt('Quiz Question 4: Did Kevin get a degree in Architectural Engineering?');
-myDegree = myDegree.toLowerCase();
+function questionFour(){
+  var myDegree = prompt('Quiz Question 4: Did Kevin get a degree in Architectural Engineering?');
+  myDegree = myDegree.toLowerCase();
 
-if (myDegree === 'yes' || myDegree === 'y') {
-  // alert('Correct, I have a Bachelors degree in Architectural Engineering.');
-  // console.log('q4: correct');
-  correctAnswerCount++;
-  answerQ = 'Correct';
-} else {
-  // console.log('q4: wrong');
-  answerQ = 'Wrong';
+  if (myDegree === 'yes' || myDegree === 'y') {
+    // alert('Correct, I have a Bachelors degree in Architectural Engineering.');
+    // console.log('q4: correct');
+    correctAnswerCount++;
+    answerQ = 'Correct';
+  } else {
+    // console.log('q4: wrong');
+    answerQ = 'Wrong';
+  }
+  alert(answerQ + ', I do have a Bachelors degree in Architectural Engineering.');
 }
-alert(answerQ + ', I do have a Bachelors degree in Architectural Engineering.');
+questionFour();
 
 // Quiz Question 5
-var myGoal = prompt('Quiz Question 5: Does Kevin want to be a Software Developer?');
-myGoal = myGoal.toLowerCase();
+function questionFive(){
+  var myGoal = prompt('Quiz Question 5: Does Kevin want to be a Software Developer?');
+  myGoal = myGoal.toLowerCase();
 
-if (myGoal === 'yes' || myGoal === 'y') {
-  // console.log('q5: correct');
-  correctAnswerCount++;
-  answerQ = 'Correct';
-} else {
-  // console.log('q5: wrong');
-  answerQ = 'Wrong';
+  if (myGoal === 'yes' || myGoal === 'y') {
+    // console.log('q5: correct');
+    correctAnswerCount++;
+    answerQ = 'Correct';
+  } else {
+    // console.log('q5: wrong');
+    answerQ = 'Wrong';
+  }
+  alert(answerQ + ', I do want to be a software developer.');
 }
-alert(answerQ + ', I do want to be a software developer.');
+questionFive();
 
 // ****** Lab 03 *******
 // Question 6
