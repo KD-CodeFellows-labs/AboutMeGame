@@ -142,36 +142,38 @@ function questionSix(){
 questionSix();
 
 // Question 7
-var favoriteColor = ['red', 'blue', 'purple', 'orange'];
-var guess = '';
-var guessCount7 = 6;
-var b;
+function questionSeven(){
+  var favoriteColor = ['red', 'blue', 'purple', 'orange'];
+  var guess = '';
+  var guessCount7 = 6;
+  var b;
 
-for (var x = 0; x < 6; x++) {
-  guess = prompt('Try and guess one of my favorite colors, you have ' + guessCount7 +' guesses.');
-  guess = guess.toLowerCase();
-  b = 0;
-  while (b < favoriteColor.length) {
-    if (guess === favoriteColor[b].toString()) {
-      alert('Correct! ' + guess.toUpperCase() + ' is one of my favorite colors!');
-      correctAnswerCount++;
-      guessCount7 = 0;
-      x = 6;
-      break;
+  for (var x = 0; x < 6; x++) {
+    guess = prompt('Try and guess one of my favorite colors, you have ' + guessCount7 +' guesses.');
+    guess = guess.toLowerCase();
+    b = 0;
+    while (b < favoriteColor.length) {
+      if (guess === favoriteColor[b].toString()) {
+        alert('Correct! ' + guess.toUpperCase() + ' is one of my favorite colors!');
+        correctAnswerCount++;
+        guessCount7 = 0;
+        x = 6;
+        break;
+      }
+      b++;
     }
-    b++;
+    guessCount7--;
   }
-  guessCount7--;
-}
 
-var c = 1;
-var favoriteString = favoriteColor[0];
-while (c < favoriteColor.length) {
-  favoriteString = favoriteString + ', ' + favoriteColor[c];
-  c++;
+  var c = 1;
+  var favoriteString = favoriteColor[0];
+  while (c < favoriteColor.length) {
+    favoriteString = favoriteString + ', ' + favoriteColor[c];
+    c++;
+  }
+  alert('My Favorite colors are: ' + favoriteString);
 }
-alert('My Favorite colors are: ' + favoriteString);
-
+questionSeven();
 // ****** final message section ******
 alert('Thanks ' + globalUserName + ' , you answered a total of ' + correctAnswerCount + ' questions correctly!');
 
