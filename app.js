@@ -1,9 +1,14 @@
 'use strict';
 // ***** Greeting section *****
-var userNme = prompt('Hi, What is your name?');
-if ((userNme === null)||(userNme === '')) {userNme = 'No Name';}
-// console.log('userNme:' + userNme);
-alert('Greetings ' + userNme + ', Welcome to Kevin\'s About Me page');
+
+function greeting() {
+  var userNme = prompt('Hi, What is your name?');
+  if ((userNme === null)||(userNme === '')) {userNme = 'No Name';}
+  // console.log('userNme:' + userNme);
+  alert('Greetings ' + userNme + ', Welcome to Kevin\'s About Me page');
+}
+greeting();
+
 
 // ***** Quiz section *****
 alert('Please take this short quiz about Kevin, answer yes or no.');
