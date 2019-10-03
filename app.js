@@ -139,6 +139,14 @@ for (var x = 0; x < 6; x++) {
   guessCount--;
 }
 
+var c = 1;
+var favoriteString = favoriteColor[0];
+while (c < favoriteColor.length) {
+  favoriteString = favoriteString + ', ' + favoriteColor[c];
+  c++;
+}
+alert('My Favorite colors are: ' + favoriteString);
+
 // ****** final message section ******
 alert('Thanks ' + userNme + ' , you answered a total of ' + correctAnswerCount + ' questions correctly!');
 
