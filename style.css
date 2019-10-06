@@ -14,6 +14,10 @@ header {
     margin: 10px auto;
     background: #4AB9CE;
     padding: 10px;
+    background-image: url("images/RainerPano.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 nav {
     list-style-type: none;
