@@ -10,11 +10,22 @@ h1 {
 }
 
 header {
-    height: 50px;
+    height: 90px;
     margin: 10px auto;
     background: #4AB9CE;
     padding: 10px;
 }
+nav {
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  nav li {
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px;
+  }
 body {
     width: 960px;
     margin: 20px auto;
@@ -38,16 +49,6 @@ body {
     border-radius: 5px;
     height: 250px;
 }
-h3 {
-    font-size: 30px;
-}
-#topTen ol {
-    margin: 5px;
-	padding: 20px;
-    border: 5px;
-    list-style-type: decimal;
-    background: #FFBB7A;
-}
 #summary {
     margin: 5px;
 	padding: 30px;
@@ -59,6 +60,16 @@ h3 {
     border-radius: 5px;
     height: 250px;
 }
+h3 {
+    font-size: 30px;
+}
+#topTen ol {
+    margin: 5px;
+	padding: 20px;
+    border: 5px;
+    list-style-type: decimal;
+    background: #FFBB7A;
+}
 #summary ul {
     margin: 5px;
 	padding: 20px;
@@ -66,6 +77,9 @@ h3 {
     list-style-type: square;
     background: #FFBB7A;
 }
-/* #labArea {
-    align-content: center;
-} */
+#labArea {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 15px;
+    padding: 10px;
+}
