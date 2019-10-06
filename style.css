@@ -13,7 +13,7 @@ header {
     height: 50px;
 }
 main {
-    background: rgb(173, 216, 230);
+    background: #9ce5f4;
 }
 
 main p{
@@ -46,7 +46,7 @@ div #summary{
 }
 
 #topTen {
-    background: rgb(245, 245, 245);
+    background: #FFCFA1;
     height: 50%;
     width: 40%;
 }
@@ -60,7 +60,7 @@ h3 {
     list-style-type: decimal;
 }
 #summary {
-    background: rgb(245, 245, 245);
+    background: #FFCFA1;
     height: 50%;
     width: 40%;
 }
