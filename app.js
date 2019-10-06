@@ -8,13 +8,27 @@ function greeting() {
   alert('Greetings ' + userNme + ', Welcome to Kevin\'s About Me page');
   return userNme;
 }
-var globalUserName;
-globalUserName = greeting();
+var globalUserName = greeting();
 
 // ***** Quiz section *****
 alert('Please take this short quiz about Kevin, answer yes or no.');
 var correctAnswerCount = 0;
 var answerQ = '';
+
+function questionFun(quizNum,myQuestion,correctAnswer,answerReply){
+  var grewUp = prompt('Quiz Question ' + quizNum + ':' + myQuestion + '?');
+  grewUp = grewUp.toLowerCase();
+
+  if (grewUp === correctAnswer || grewUp === correctAnswer[0]) {
+    // console.log('q1: correct');
+    correctAnswerCount++;
+    answerQ = 'Correct';
+  } else {
+    // console.log('q1: wrong');
+    answerQ = 'Wrong';
+  }
+  return(answerQ + ', ' + answerReply);
+}
 
 // Quiz Question 1
 function questionOne(){
@@ -107,24 +121,18 @@ questionFive();
 function questionSix(){
   var myNum = 4;
   var guessNum = null;
-  var guessCount;
   var numberGuess = false;
-
-  guessCount = 4;
   for(var i = 0; i < 4; i++) {
     console.log('guess i:',i);
     if (isNaN(guessNum) || guessNum === null) {
-      guessNum = parseInt(prompt('Guess what number I am thinking of between 1 and 10. You have ' + guessCount + ' guesses.'));
+      guessNum = parseInt(prompt('Guess what number I am thinking of between 1 and 10. You have ' + (4-i) + ' guesses.'));
       console.log('start or null');
-      guessCount--;
     } else if (guessNum > myNum) {
-      guessNum = parseInt(prompt('Too High, guess again, you have ' + guessCount + ' guesses.'));
+      guessNum = parseInt(prompt('Too High, guess again, you have ' + (4-i) + ' guesses.'));
       console.log('too high');
-      guessCount--;
     } else if (guessNum < myNum) {
-      guessNum = parseInt(prompt('Too Low, guess again, you have ' + guessCount + ' guesses.'));
+      guessNum = parseInt(prompt('Too Low, guess again, you have ' + (4-i) + ' guesses.'));
       console.log('too low');
-      guessCount--;
     }
     if (guessNum === myNum) {
       alert('Correct! My number was ' + myNum.toString() + '!');
@@ -164,14 +172,7 @@ function questionSeven(){
     }
     guessCount7--;
   }
-
-  var c = 1;
-  var favoriteString = favoriteColor[0];
-  while (c < favoriteColor.length) {
-    favoriteString = favoriteString + ', ' + favoriteColor[c];
-    c++;
-  }
-  alert('My Favorite colors are: ' + favoriteString);
+  alert('My Favorite colors are: ' + favoriteColor);
 }
 questionSeven();
 // ****** final message section ******
